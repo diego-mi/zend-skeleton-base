@@ -1,12 +1,19 @@
 <?php
 namespace Categoria\Controller;
 
-use Base\Controller\AbstractController;
+use Base\Controller\AbstractCrudController;
 
-class IndexController extends AbstractController
+/**
+ * Class IndexController
+ * @package Categoria\Controller
+ */
+class IndexController extends AbstractCrudController
 {
 
-    function __construct()
+    /**
+     * IndexController constructor.
+     */
+    public function __construct()
     {
         $this->strForm = 'Categoria\Form\CategoryForm';
         $this->controller = 'categoria';

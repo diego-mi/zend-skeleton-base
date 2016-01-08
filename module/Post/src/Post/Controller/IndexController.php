@@ -1,11 +1,18 @@
 <?php
 namespace Post\Controller;
 
-use Base\Controller\AbstractController;
+use Base\Controller\AbstractCrudController;
 
-class IndexController extends AbstractController
+/**
+ * Class IndexController
+ * @package Post\Controller
+ */
+class IndexController extends AbstractCrudController
 {
-    function __construct()
+    /**
+     * IndexController constructor.
+     */
+    public function __construct()
     {
         $this->strForm = 'Post\Form\PostForm';
         $this->controller = 'post';

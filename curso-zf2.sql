@@ -32,12 +32,6 @@ CREATE TABLE IF NOT EXISTS `category` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
---
--- Fazendo dump de dados para tabela `category`
---
-
-INSERT INTO `category` (`id`, `nome`) VALUES
-(1, 'dasdasda');
 
 -- --------------------------------------------------------
 
@@ -46,23 +40,8 @@ INSERT INTO `category` (`id`, `nome`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `post` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `titulo` varchar(80) NOT NULL,
-  `descricao` varchar(150) NOT NULL,
-  `texto` longtext NOT NULL,
-  `cadastro` datetime NOT NULL,
-  `alterado` datetime DEFAULT NULL,
-  `ativo` tinyint(1) NOT NULL,
-  `category` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
+  `id` int(11) NOT NULL AUTO_INCREMENT, `titulo` varchar(80) NOT NULL, `descricao` varchar(150) NOT NULL, `texto` longtext NOT NULL, `cadastro` datetime NOT NULL, `alterado` datetime DEFAULT NULL, `ativo` tinyint(1) NOT NULL, `category` int(11) NOT NULL, PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
-
---
--- Fazendo dump de dados para tabela `post`
---
-
-INSERT INTO `post` (`id`, `titulo`, `descricao`, `texto`, `cadastro`, `alterado`, `ativo`, `category`) VALUES
-(1, 'dasdas', 'dasda', 'dasda', '2015-09-20 16:19:54', NULL, 1, 1);
 
 --
 -- Restrições para dumps de tabelas
