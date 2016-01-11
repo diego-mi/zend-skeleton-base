@@ -52,11 +52,13 @@
     </div>
 </nav>
 <div class="container">
-    <?php echo $this->content; ?>
-    <hr>
     <?php
-    var_dump($this->someVar);
+    echo $this->flashMessenger()->render("error", array('alert', 'alert-danger'));
+    echo $this->flashMessenger()->render("success", array('alert', 'alert-success'));
+    echo $this->flashMessenger()->render("warning", array('alert', 'alert-warning'));
+    echo $this->content;
     ?>
+    <hr>
     <footer>
         <p>&copy; 2005 - <?php echo date('Y') ?> by Zend Technologies
             Ltd. <?php echo $this->translate('All rights reserved.') ?></p>

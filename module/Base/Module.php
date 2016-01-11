@@ -16,26 +16,16 @@ class Module
     public function onBootstrap(MvcEvent $e)
     {
         $eventManager = $e->getApplication()->getEventManager();
-        $myServiceManager = $e->getApplication()->getServiceManager();
 
-        $viewModel = $e->getApplication()->getMvcEvent()->getViewModel();
-        $myService = $myServiceManager->get('Categoria\Service\CategoriaService');
-        $viewModel->someVar = $myService->getRepository()->findAll();
+        #codigo para dados dinamicos para o layout
+//        $myServiceManager = $e->getApplication()->getServiceManager();
+//        $viewModel = $e->getApplication()->getMvcEvent()->getViewModel();
+//        $myService = $myServiceManager->get('Categoria\Service\CategoriaService');
+//        $viewModel->someVar = $myService->getRepository()->findAll();
 
         $moduleRouteListener = new ModuleRouteListener();
         $moduleRouteListener->attach($eventManager);
     }
-
-//    public function onBootstrap($e) {
-//
-//        $serviceManager = $e->getApplication()->getServiceManager();
-//        $viewModel = $e->getApplication()->getMvcEvent()->getViewModel();
-//
-//        $myService = $serviceManager->get('MyModule\Service\MyService');
-//
-//        $viewModel->someVar = $myService->getSomeValue();
-//
-//    }
 
     /**
      * @return mixed

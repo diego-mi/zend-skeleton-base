@@ -1,27 +1,10 @@
 <a class="btn btn-success" href="<?php echo $this->url('post/default', array('controller' => 'categoria', 'action' => 'inserir')); ?>">Cadastar</a>
-<br>
-<?php
-$strMessage = "";
-$strMessageType = "";
-if ($this->flashMessenger->hasSuccessMessages()) {
-    $strMessage = $this->flashMessenger()->getSuccessMessages();
-    $strMessageType = 'success';
-}
-if ($this->flashMessenger->hasErrorMessages()) {
-    $strMessage = $this->flashMessenger()->getErrorMessages();
-    $strMessageType = 'danger';
-}
-if (strlen($strMessage[0])) {
-    echo '<div class="alert alert-'.$strMessageType.'">'
-        .$strMessage[0].
-        '<button type="button" class="close" data-dismiss="alert">×</button></div>';
-}
+<hr>
 
-?>
+<h1>Todos os posts</h1>
 
 <form id="form-grid" action="" method="post">
     <table class="table table-bordered table-striped table-hover table-condensed">
-        <caption>Todas os Posts</caption>
         <thead>
         <tr>
             <th style="width: 30px"><input type="checkbox" name="todos" /></th>
